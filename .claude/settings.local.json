@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.taxitoni.de)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npx create-next-app@latest taxi-toni --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(cp -r temp-init/taxi-toni/* .)",
+      "Bash(cp -r temp-init/taxi-toni/.* .)",
+      "Bash(rm -rf temp-init)"
+    ]
+  }
+}
