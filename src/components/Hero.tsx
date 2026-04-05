@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MapPin, Clock, ChevronDown } from "lucide-react";
 
@@ -62,29 +61,12 @@ export function Hero() {
           </span>
         </motion.div>
 
-        {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.05 }}
-          className="mb-8"
-        >
-          <Image
-            src="/vip-logo.png"
-            alt="VIP Taxi Toni"
-            width={400}
-            height={70}
-            className="h-14 sm:h-16 md:h-20 w-auto mx-auto invert hue-rotate-180"
-            priority
-          />
-        </motion.div>
-
         {/* Main Heading */}
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6"
+          className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[0.95] mb-6"
         >
           <span className="text-foreground">Ihr Premium</span>
           <br />
