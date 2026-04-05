@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Phone, MapPin, Clock, ChevronDown } from "lucide-react";
 
@@ -59,6 +60,23 @@ export function Hero() {
           <span className="text-sm text-muted">
             24/7 verfugbar &mdash; 365 Tage im Jahr
           </span>
+        </motion.div>
+
+        {/* Logo - hidden on mobile, visible on desktop */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.05 }}
+          className="hidden sm:block mb-8"
+        >
+          <Image
+            src="/vip-logo.png"
+            alt="VIP Taxi Toni"
+            width={400}
+            height={70}
+            className="sm:h-14 md:h-20 w-auto mx-auto invert hue-rotate-180"
+            priority
+          />
         </motion.div>
 
         {/* Main Heading */}
